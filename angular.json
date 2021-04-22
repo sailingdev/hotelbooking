@@ -1,0 +1,157 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "HotelBooking": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/HotelBooking",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [              
+              "src/assets/vendor/font-awesome/css/fontawesome-all.min.css",
+              "src/assets/font-mytravel.css",
+              "src/assets/vendor/animate.css/animate.min.css",
+              "src/assets/vendor/hs-megamenu/src/hs.megamenu.css",
+              "src/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+              "src/assets/vendor/flatpickr/dist/flatpickr.min.css",
+              "src/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css",
+              "src/assets/vendor/slick-carousel/slick/slick.css",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "src/assets/vendor/jquery/dist/jquery.min.js",
+              "src/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js",
+              "src/assets/vendor/popper.js/dist/umd/popper.min.js",
+              "src/assets/vendor/bootstrap/bootstrap.min.js",
+              "src/assets/vendor/hs-megamenu/src/hs.megamenu.js",
+              "src/assets/vendor/jquery-validation/dist/jquery.validate.min.js",
+              "src/assets/vendor/flatpickr/dist/flatpickr.min.js",
+              "src/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js",
+              "src/assets/vendor/slick-carousel/slick/slick.js",
+              "src/assets/js/hs.core.js",
+              "src/assets/js/components/hs.header.js",
+              "src/assets/js/components/hs.unfold.js",
+              "src/assets/js/components/hs.validation.js",
+              "src/assets/js/components/hs.show-animation.js",
+              "src/assets/js/components/hs.range-datepicker.js",
+              "src/assets/js/components/hs.selectpicker.js",
+              "src/assets/js/components/hs.go-to.js",
+              "src/assets/js/components/hs.slick-carousel.js",
+              "src/assets/js/components/hs.quantity-counter.js"
+
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "HotelBooking:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "HotelBooking:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "HotelBooking:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "HotelBooking:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "HotelBooking:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "HotelBooking"
+}
