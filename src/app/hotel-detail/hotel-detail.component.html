@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content" >
+    <app-hotel-single-v1 *ngIf="showStyle == 'v1'" [hidden]="showStyle == 'v2' || showStyle == 'v3'"></app-hotel-single-v1>
+    <app-hotel-single-v2 *ngIf="showStyle == 'v2'" [hidden]="showStyle == 'v1' || showStyle == 'v3'"></app-hotel-single-v2>
+    <app-hotel-single-v3 *ngIf="showStyle == 'v3'" [hidden]="showStyle == 'v1' || showStyle == 'v2'"></app-hotel-single-v3>
+</main> 
+
+<!-- ========== END MAIN CONTENT ========== -->
+<app-footer></app-footer>

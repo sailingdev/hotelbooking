@@ -7,13 +7,27 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { HotelBookingComponent } from './hotel-booking/hotel-booking.component';
+import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
+import { HotelSingleV3Component } from './hotel-single-v3/hotel-single-v3.component';
+import { HotelSingleV2Component } from './hotel-single-v2/hotel-single-v2.component';
+import { HotelSingleV1Component } from './hotel-single-v1/hotel-single-v1.component';
+import { HotelListWithMapComponent } from './hotel-list-with-map/hotel-list-with-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    HotelListComponent,
+    HotelBookingComponent,
+    HotelDetailComponent,
+    HotelSingleV3Component,
+    HotelSingleV2Component,
+    HotelSingleV1Component,
+    HotelListWithMapComponent
   ],
   imports: [
     BrowserModule,

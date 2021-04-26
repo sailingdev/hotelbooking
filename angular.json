@@ -33,9 +33,13 @@
               "src/assets/vendor/animate.css/animate.min.css",
               "src/assets/vendor/hs-megamenu/src/hs.megamenu.css",
               "src/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+              "src/assets/vendor/fancybox/jquery.fancybox.css",
               "src/assets/vendor/flatpickr/dist/flatpickr.min.css",
-              "src/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css",
               "src/assets/vendor/slick-carousel/slick/slick.css",
+              "src/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css",
+              "src/assets/vendor/dzsparallaxer/dzsparallaxer.css",
+              "src/assets/vendor/ion-rangeslider/css/ion.rangeSlider.css",
+              "src/assets/vendor/custombox/dist/custombox.min.css",
               "src/styles.scss"
             ],
             "scripts": [
@@ -48,6 +52,13 @@
               "src/assets/vendor/flatpickr/dist/flatpickr.min.js",
               "src/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js",
               "src/assets/vendor/slick-carousel/slick/slick.js",
+              "src/assets/vendor/gmaps/gmaps.min.js",
+              "src/assets/vendor/fancybox/jquery.fancybox.min.js",
+              "src/assets/vendor/appear.js",
+              "src/assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js",
+              "src/assets/vendor/custombox/dist/custombox.min.js",
+              "src/assets/vendor/custombox/dist/custombox.legacy.min.js",
+              "src/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
               "src/assets/js/hs.core.js",
               "src/assets/js/components/hs.header.js",
               "src/assets/js/components/hs.unfold.js",
@@ -55,9 +66,17 @@
               "src/assets/js/components/hs.show-animation.js",
               "src/assets/js/components/hs.range-datepicker.js",
               "src/assets/js/components/hs.selectpicker.js",
+              "src/assets/js/components/hs.range-slider.js",
               "src/assets/js/components/hs.go-to.js",
               "src/assets/js/components/hs.slick-carousel.js",
-              "src/assets/js/components/hs.quantity-counter.js"
+              "src/assets/js/components/hs.quantity-counter.js",
+              "src/assets/js/components/hs.g-map.js",
+              "src/assets/js/components/hs.fancybox.js",
+              "src/assets/js/components/hs.scroll-nav.js",
+              "src/assets/js/components/hs.sticky-block.js",
+              "src/assets/js/components/hs.modal-window.js",
+              "src/assets/js/components/hs.malihu-scrollbar.js",
+              "src/assets/js/components/hs.focus-state.js"
 
             ]
           },

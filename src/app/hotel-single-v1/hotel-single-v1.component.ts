@@ -1,28 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-hotel-single-v1',
+  templateUrl: './hotel-single-v1.component.html',
+  styleUrls: ['./hotel-single-v1.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HotelSingleV1Component implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
+
+      // initialization of HSMegaMenu component
       $('.js-mega-menu').HSMegaMenu({
-        event: 'hover',
-        pageContainer: $('.container'),
-        breakpoint: 1199.98,
-        hideTimeOut: 0
+          event: 'hover',
+          pageContainer: $('.container'),
+          breakpoint: 1199.98,
+          hideTimeOut: 0
       });
 
       // Page preloader
       setTimeout(function() {
         $('#jsPreloader').fadeOut(500)
       }, 800);
+
+
+
       // initialization of header
       $.HSCore.components.HSHeader.init($('#header'));
+
+      // initialization of google map
+      function initMap() {
+          $.HSCore.components.HSGMap.init('.js-g-map');
+      }
+
+      // initialization of autonomous popups
+      $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-modal-window', {
+          autonomous: true
+      });
 
       // initialization of unfold component
       $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
@@ -32,6 +47,12 @@ export class HomeComponent implements OnInit {
 
       // initialization of datepicker
       $.HSCore.components.HSRangeDatepicker.init('.js-range-datepicker');
+
+      // initialization of forms
+      $.HSCore.components.HSRangeSlider.init('.js-range-slider');
+
+      // initialization of malihu scrollbar
+      $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
 
       // initialization of select
       $.HSCore.components.HSSelectPicker.init('.js-select');
@@ -44,6 +65,7 @@ export class HomeComponent implements OnInit {
 
       // initialization of go to
       $.HSCore.components.HSGoTo.init('.js-go-to');
+  
   }
 
 }
